@@ -1,6 +1,5 @@
 import axios from "axios";
-import 'dotenv/config'
-const API_URL = process.env.API_URL;
+const API_URL = import.meta.env.VITE_API_URL
 
 export const createWallet = (name, balance) =>{
   return   axios.post(`${API_URL}/wallet/setup`, { name, balance });
